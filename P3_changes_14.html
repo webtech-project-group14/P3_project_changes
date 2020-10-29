@@ -17,7 +17,9 @@
 
     <div class="box">
         <h2>Administrative detaljer</h2>
-        <p>Klientens navn er Monica og hun er en selvstendig strikker.</p>
+        <p>Klientens navn er Monica og hun er en selvstendig strikker.<br>
+            Nettsidens navn: Små Strikk
+        </p>
         <a href="#">Her er link til forsiden</a>
     </div>
 
@@ -27,12 +29,48 @@
         <p>Under og etter konstruksjonen av nettsiden ble det gjort noen få endringer fra P2 - Design. Desse endringene
             er beskrevet nedenfor.</p>
 
-        <p><b>Forsiden: </b> bla bla bla</p>
+        <p><b>Forsiden: </b>Det ble lagt animasjoner til forsiden for første besøk. Forsiden er først helt hvit, og
+            gradvis kommer bakgrunnsbildet mer til synet.
+            Ikke lenge etter bakgrunnsbildet er fullt synlig kommer navigasjonsbar og footer også frem. Aller sist
+            kommer nettsidens tittel frem som har blitt avgjort til å være "Små Strikk".
+            I det originale designet var dette planlagt å være en lengre tekst som beskrev innholdet til nettsiden, men
+            det ble bestemt av klienten at nettsidens tittelen, "Små Strikk", kort og enkelt oppfyller dette kravet.
+            Animasjonen som nevnt over skal bare bli kjørt ved første besøk på nettsiden. For å oppnå dette kravet ble
+            <i>forsiden.js</i> opprettet.</p>
 
-        <p><b>Nettbutikk: </b> I tillegg til dropdown-meny for å velge størrelse og en "legg til i handlekurv" ble det også laget en dropdown for å velge antall av hver artikkel. Skriftstørrelse er noe annerledes enn på de andre sidene hvor det er bedre med en annen størrelse, f.eks overskriften til hver artikkel og den lille handlekurven. </p>
+        <p><b>Navigasjonsbar og footer: </b>Fra det originale designet er det lite som er endret. For at besøkende
+            skulle få tydeligere indikasjon på hva som kan trykkes på, blir både instagram- og mailikonet forstørret når
+            musen svever over den.
+            Utenom dette, var det en del å gjøre for at nettsiden skulle opptre responsivt. Her ble det laget et
+            meny-ikon med en "dropdown-meny" når gjestens skjermstørrelse er mindre
+            enn 800px i bredde. Dette ikonet utheves også når musepekeren svever over.
+            En dropdown-meny ble nødvendig da det ble for trangt med plass på navbaren etterhvert som skjermstørrelsen
+            ble mindre. Her har vi ikke den samme hvite linjen for å indikere nåværende side.</p>
 
-        <p><b>nettbutikk.js: </b> All funksjonalitet som er beskrevet i P2 er implementert, bortsett fra mulighet til å fjerne elementer i handlekurven. I tillegg er det laget en liten handlekurv som kan brukes når nettsiden er smal. Når nettsiden er smal vil handlekurven på høyre side bli borte. I stede vil et handlekurvikon nederst på siden dukke opp, og et trykk på denne viser en liten versjon av handlekurven. Det er lagt til funksjonalitet som sørger for at "Legg til i handlekurv"-knappen ikke er mulig å trykke på uten at både størrelse og antall for artikkelen er valgt. Ved å trykke på bilde av artikkelen vil et større bilde vises, slik det er beskrevet i P2. I tillegg vil artikkelbeskrivelsen vises under bildet, for å sørge for at brukeren for all informasjon også når bildet er stort. Bildet og beskrivelsen blir større med en "zoom"-effekt for å gjøre overgangen finere. På størrelsesdropdown-menyen er det lagt til funksjonalitet som sørger for at de ulike artiklene kan ha forskjellige størrelsesvalg. Dette kan være greit for Monica ettersom oppskrifter kan inneholde forskjellige størrelser. </p>
-        <p><b>Galleri:</b> Det aller meste av funksjonalitet er implementert slik som beskrevet i P2. Valgt bilde i galleriet beholder ikke den hvite rammen i det bildet vises til høyre. Ellers vil brukeren kunne vise bildet til høyre ved klikk på et bilde til venstre. Samtidig er galleriet blitt lagt til rette for bruk på mindre skjermer. Da vil høyre side falle bort og brukeren får kun se venstre side. Ved trykk vil bilde bli stort på skjermen og brukeren kan fjerne bildet med en knapp. Monica vil kanskje legge til mer tekst på galleriet selv. Dersom brukeren ønsker å lese teksten og få bort bildet når det er stort på høyre siden, kan brukeren trykke en gang til på valgt bilde for å ta bort bildet og se teksten under. Dette er kun mulig når skjermen er så stor at den viser høyre og venstre side seperat.  </p>
+        <p><b>Nettbutikk: </b> I tillegg til dropdown-meny for å velge størrelse og en "legg til i handlekurv" ble det
+            også laget en dropdown for å velge antall av hver artikkel. Skriftstørrelse er noe annerledes enn på de
+            andre sidene hvor det er bedre med en annen størrelse, f.eks overskriften til hver artikkel og den lille
+            handlekurven. </p>
+
+        <p><b>nettbutikk.js: </b> All funksjonalitet som er beskrevet i P2 er implementert, bortsett fra mulighet til å
+            fjerne elementer i handlekurven. I tillegg er det laget en liten handlekurv som kan brukes når nettsiden er
+            smal. Når nettsiden er smal vil handlekurven på høyre side bli borte. I stede vil et handlekurvikon nederst
+            på siden dukke opp, og et trykk på denne viser en liten versjon av handlekurven. Det er lagt til
+            funksjonalitet som sørger for at "Legg til i handlekurv"-knappen ikke er mulig å trykke på uten at både
+            størrelse og antall for artikkelen er valgt. Ved å trykke på bilde av artikkelen vil et større bilde vises,
+            slik det er beskrevet i P2. I tillegg vil artikkelbeskrivelsen vises under bildet, for å sørge for at
+            brukeren for all informasjon også når bildet er stort. Bildet og beskrivelsen blir større med en
+            "zoom"-effekt for å gjøre overgangen finere. På størrelsesdropdown-menyen er det lagt til funksjonalitet som
+            sørger for at de ulike artiklene kan ha forskjellige størrelsesvalg. Dette kan være greit for Monica
+            ettersom oppskrifter kan inneholde forskjellige størrelser. </p>
+        <p><b>Galleri:</b> Det aller meste av funksjonalitet er implementert slik som beskrevet i P2. Valgt bilde i
+            galleriet beholder ikke den hvite rammen i det bildet vises til høyre. Ellers vil brukeren kunne vise bildet
+            til høyre ved klikk på et bilde til venstre. Samtidig er galleriet blitt lagt til rette for bruk på mindre
+            skjermer. Da vil høyre side falle bort og brukeren får kun se venstre side. Ved trykk vil bilde bli stort på
+            skjermen og brukeren kan fjerne bildet med en knapp. Monica vil kanskje legge til mer tekst på galleriet
+            selv. Dersom brukeren ønsker å lese teksten og få bort bildet når det er stort på høyre siden, kan brukeren
+            trykke en gang til på valgt bilde for å ta bort bildet og se teksten under. Dette er kun mulig når skjermen
+            er så stor at den viser høyre og venstre side seperat. </p>
 
     </div>
 
@@ -77,6 +115,14 @@
 
     <div class="box">
         <h2>Endelig arbeidsfordeling</h2>
+
+        <p>Den første planen hadde alle som ansvarlig over <i>navbar_and_footer</i>, men det bli tidlig oppdaget at
+            dette arbeidet var oppnåelig av bare en person.
+            Eirik ble ansvarlig over <i>navbar_and_footer</i>.</p>
+        <p>Det var originalt satt tre ansvarlige på <i>nettbutikk.js</i>, men dette viste seg å være oppnåelig av en
+            person. Sofie tok hovedansvaret her.</p>
+        <p><i>forsiden.js</i> ble opprettet for å begrense animasjoner på forsiden til første besøk.</p>
+
 
         <table>
             <tr>
@@ -148,7 +194,7 @@
             <tr>
                 <th>nettbutikk.js</th>
                 <th>Funksjonalitet i nettbutikk. Størrelse- og antall-dropdown. Bestillingsoversikt.</th>
-                <th>Sofie, Alex</th>
+                <th>Sofie</th>
                 <th>27.10.20</th>
             </tr>
             <tr>
