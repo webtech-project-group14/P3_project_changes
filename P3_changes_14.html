@@ -38,7 +38,7 @@
             Animasjonen som nevnt over skal bare bli kjørt ved første besøk på nettsiden. For å oppnå dette kravet ble
             <i>forsiden.js</i> opprettet.</p>
 
-        <p><b>Navigasjonsbar og footer: </b>Fra det originale designet er det lite som er endret. For at besøkende
+        <p><b>navbar_and_footer.js: </b>Fra det originale designet er det lite som er endret. For at besøkende
             skulle få tydeligere indikasjon på hva som kan trykkes på, blir både instagram- og mailikonet forstørret når
             musen svever over den.
             Utenom dette, var det en del å gjøre for at nettsiden skulle opptre responsivt. Her ble det laget et
@@ -46,7 +46,12 @@
             enn 800px i bredde. Dette ikonet utheves også når musepekeren svever over.
             En dropdown-meny ble nødvendig da det ble for trangt med plass på navbaren etterhvert som skjermstørrelsen
             ble mindre. Her har vi ikke den samme hvite linjen for å indikere nåværende side.</p>
-
+        <p>Tidlig i konstruksjonen av nettsiden ble det gjort et forsøk å dynamisk legge til ikoner til footer ved bruk
+            av <i>navbar_and_footer.js</i>. Dette var for å unngå repetisjon av HTML-kode for hver side (modularitet).
+            Dessverre resulterte dette i at ikoner på footeren lastet inn senere enn resten av siden.
+            Dette var spesielt tydelig når en trykket mellom sidene og ikonene hadde en blinkende effekt.
+            På grunn av dette, ble det bestemt at ikon-bilder skal være i HTML-koden for hver side.</p>
+        <p><b>Favicon: </b>Det ble opprettet et favicon for nettsiden.</p>
         <p><b>Nettbutikk: </b> I tillegg til dropdown-meny for å velge størrelse og en "legg til i handlekurv" ble det
             også laget en dropdown for å velge antall av hver artikkel. Skriftstørrelse er noe annerledes enn på de
             andre sidene hvor det er bedre med en annen størrelse, f.eks overskriften til hver artikkel og den lille
@@ -78,7 +83,7 @@
             elementet sitt, som i P2 var intill høyre side av skjermen. Den tredje endringen er at størrelsen på bildene
             vil maks være 75% av bredden på venstre-elementet i stedenfor ca. 50% slik vist i P2.
         </p>
-        
+
         <p><b>blogg_arkiv.js:</b> </p>
 
     </div>
@@ -99,10 +104,36 @@
             </li>
             <li>images
                 <ul>
-                    <li>image1.png</li>
-                    <li>image2.jpg</li>
-                    <li>...</li>
+                    <li>blogg
+                        <ul>
+                            <li>blogg_1.png</li>
+                            <li>blogg_2.jpg</li>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                    <li>nettbutikk
+                        <ul>
+                            <li>nettbutikk_1.png</li>
+                            <li>nettbutikk_2.jpg</li>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                    <li>galleri
+                        <ul>
+                            <li>galleri_1.png</li>
+                            <li>galleri_2.jpg</li>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                    <li>contact.png</li>
+                    <li>forside.jpg</li>
+                    <li>instalogo.png</li>
+                    <li>menu.svg</li>
+                    <li>ommeg.jpg</li>
+                    <li>shoppingcart.png</li>
+                    <li>yarn_logo.svg</li>
                 </ul>
+
             </li>
             <li>JS
                 <ul>
@@ -131,6 +162,9 @@
         <p>Det var originalt satt tre ansvarlige på <i>nettbutikk.js</i>, men dette viste seg å være oppnåelig av en
             person. Sofie tok hovedansvaret her.</p>
         <p><i>forsiden.js</i> ble opprettet for å begrense animasjoner på forsiden til første besøk.</p>
+        <p>Undermappene <i>blogg</i>, <i>nettbutikk</i>, og <i>galleri</i> ble opprettet for å gi en mer oversiktelig
+            bildestruktur.</p>
+        <p>Bilder ble hentet fra klienten og ikoner ble laget av Eirik i Paint.NET og Inkscape.</p>
 
 
         <table>
@@ -244,7 +278,8 @@
             </tr>
             <tr>
                 <th>Testing</th>
-                <th>Fikse bugs og teste koden. Sjekke hvor responsiv siden er, samt opprette spørreundersøkelse og hente tilbakemeldinger fra publikum.</th>
+                <th>Fikse bugs og teste koden. Sjekke hvor responsiv siden er, samt opprette spørreundersøkelse og hente
+                    tilbakemeldinger fra publikum.</th>
                 <th>Alle</th>
                 <th>03.11.20</th>
             </tr>
