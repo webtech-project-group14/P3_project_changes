@@ -62,17 +62,17 @@
             fjerne elementer i handlekurven. Det er i tillegg blitt implementert følgende funksjonalitet:
             <ul>
                 <li>Responsivt design: Når nettsiden er mindre enn 1100px forsvinner artikkelbeskrivelsen. Når nettsiden er mindre enn 800 px forsvinner høyre side og artikkelbeskrivelsen 
-                    kommer tilbake. For å få tak i handlekurven kan brukeren trykke på et handlekurvikon, og en mindre versjon av handlekurven blir tilgjenglig.
+                    kommer tilbake. For å få tak i handlekurven under 800px kan brukeren trykke på et handlekurvikon, og en mindre versjon av handlekurven blir tilgjenglig. Under 500px vil artikkelbeskrivelsen forsvinne for å bevare et brukervennlig design.
                 </li>
-                <li>"Legg til i handlekurv"-knappen er kun mulig å trykke på dersom både størrelse og antall for artikkelen er valgt. </li>
-                <li>Ved å trykke på et bildene vil et større bilde vises. Artikkelbeskrivelsen vises da under bildet for å ørge for at
-                    brukeren for all informasjon også når bildet er stort. Bildet og beskrivelsen blir større med en
-                    "zoom"-effekt for å gjøre overgangen finere. </li>
+                <li>"Legg til i handlekurv"-knappen er kun mulig å trykke på dersom både størrelse og antall for artikkelen er valgt. Dette er for å unngå at brukeren glemmer å velge størrelse eller antall. </li>
+                <li>Ved å trykke på et bilde vil et større bilde vises (pop-up) og bakgrunnsfargen bak bildet blir svart og noe gjennomsiktig. I tillegg vises artikkelbeskrivelsen under bildet for å sørge for at
+                    brukeren for all informasjon også når bildet er stort. Bildet og beskrivelsen blir forstørres med en "zoom"-effekt for å gjøre overgangen finere. </li>
                 <li>Ved å holde over et bilde kommer det en skygge over bildet. Dette er for å tydeliggjøre at det er mulig å trykke på bildet.</li>
                 <li>På størrelsesdropdown-menyen er det lagt til rette for at de ulike artiklene kan ha ulike størrelser tilgjenglig. Dette kan være en fordel for Monica
                     ettersom oppskrifter kan inneholde forskjellige størrelser.</li>
             </ul>
-            Ettersom artikkelbilde, navn, pris, beskrivelse, størrelses-dropdown, antall-dropdown og "Legg til i handlekurv"-knapp er felles for alle artiklene ble disse generert av en kode i nettbutikk.js.......
+            Ettersom artikkelbilde, navn, pris, beskrivelse, størrelses-dropdown, antall-dropdown og "Legg til i handlekurv"-knapp er felles for alle artiklene ble modularitet brukt for generere disse.
+            Dette ble løst ved å legge all informasjon om artikkelen i et JSON-objekt, og ha alle objektene i én liste i nettbutikk.js. Når siden lastes ned kjøres en kode som går gjennom listen og lager alle elementene.
         </p>
         <p><b>Galleri:</b> Det aller meste av funksjonalitet er implementert slik som beskrevet i P2. Valgt bilde i
             galleriet beholder ikke den hvite rammen i det bildet vises til høyre. Ellers vil brukeren kunne vise bildet
