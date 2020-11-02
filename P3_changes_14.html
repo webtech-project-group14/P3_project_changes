@@ -52,22 +52,28 @@
             Dette var spesielt tydelig når en trykket mellom sidene og ikonene hadde en blinkende effekt.
             På grunn av dette, ble det bestemt at ikon-bilder skal være i HTML-koden for hver side.</p>
         <p><b>Favicon: </b>Det ble opprettet et favicon for nettsiden.</p>
-        <p><b>Nettbutikk: </b> I tillegg til dropdown-meny for å velge størrelse og en "legg til i handlekurv" ble det
-            også laget en dropdown for å velge antall av hver artikkel. Skriftstørrelse er noe annerledes enn på de
-            andre sidene hvor det er bedre med en annen størrelse, f.eks overskriften til hver artikkel og den lille
-            handlekurven. </p>
+
+        <p><b>Nettbutikk: </b> I tillegg til dropdown-meny for å velge størrelse og en "Legg til i handlekurv"-knapp ble det
+            også laget en dropdown for å velge antall av hver artikkel. Skriftstørrelse på artikkelnavn, artikkelpris og artikkelbeskrivelse er 
+            tilpasset, og dermed annereledes enn de andre sidene. Det ble laget en liten handlekurv som brukes når skjermen er liten. Den lille handlekurven
+            fungerer helt likt som den vanlige handlekurven. </p>
 
         <p><b>nettbutikk.js: </b> All funksjonalitet som er beskrevet i P2 er implementert, bortsett fra mulighet til å
-            fjerne elementer i handlekurven. I tillegg er det laget en liten handlekurv som kan brukes når nettsiden er
-            smal. Når nettsiden er smal vil handlekurven på høyre side bli borte. I stede vil et handlekurvikon nederst
-            på siden dukke opp, og et trykk på denne viser en liten versjon av handlekurven. Det er lagt til
-            funksjonalitet som sørger for at "Legg til i handlekurv"-knappen ikke er mulig å trykke på uten at både
-            størrelse og antall for artikkelen er valgt. Ved å trykke på bilde av artikkelen vil et større bilde vises,
-            slik det er beskrevet i P2. I tillegg vil artikkelbeskrivelsen vises under bildet, for å sørge for at
-            brukeren for all informasjon også når bildet er stort. Bildet og beskrivelsen blir større med en
-            "zoom"-effekt for å gjøre overgangen finere. På størrelsesdropdown-menyen er det lagt til funksjonalitet som
-            sørger for at de ulike artiklene kan ha forskjellige størrelsesvalg. Dette kan være greit for Monica
-            ettersom oppskrifter kan inneholde forskjellige størrelser. </p>
+            fjerne elementer i handlekurven. Det er i tillegg blitt implementert følgende funksjonalitet:
+            <ul>
+                <li>Responsivt design: Når nettsiden er mindre enn 1100px forsvinner artikkelbeskrivelsen. Når nettsiden er mindre enn 800 px forsvinner høyre side og artikkelbeskrivelsen 
+                    kommer tilbake. For å få tak i handlekurven kan brukeren trykke på et handlekurvikon, og en mindre versjon av handlekurven blir tilgjenglig.
+                </li>
+                <li>"Legg til i handlekurv"-knappen er kun mulig å trykke på dersom både størrelse og antall for artikkelen er valgt. </li>
+                <li>Ved å trykke på et bildene vil et større bilde vises. Artikkelbeskrivelsen vises da under bildet for å ørge for at
+                    brukeren for all informasjon også når bildet er stort. Bildet og beskrivelsen blir større med en
+                    "zoom"-effekt for å gjøre overgangen finere. </li>
+                <li>Ved å holde over et bilde kommer det en skygge over bildet. Dette er for å tydeliggjøre at det er mulig å trykke på bildet.</li>
+                <li>På størrelsesdropdown-menyen er det lagt til rette for at de ulike artiklene kan ha ulike størrelser tilgjenglig. Dette kan være en fordel for Monica
+                    ettersom oppskrifter kan inneholde forskjellige størrelser.</li>
+            </ul>
+            Ettersom artikkelbilde, navn, pris, beskrivelse, størrelses-dropdown, antall-dropdown og "Legg til i handlekurv"-knapp er felles for alle artiklene ble disse generert av en kode i nettbutikk.js.......
+        </p>
         <p><b>Galleri:</b> Det aller meste av funksjonalitet er implementert slik som beskrevet i P2. Valgt bilde i
             galleriet beholder ikke den hvite rammen i det bildet vises til høyre. Ellers vil brukeren kunne vise bildet
             til høyre ved klikk på et bilde til venstre. Samtidig er galleriet blitt lagt til rette for bruk på mindre
