@@ -74,6 +74,7 @@
             Ettersom artikkelbilde, navn, pris, beskrivelse, størrelses-dropdown, antall-dropdown og "Legg til i handlekurv"-knapp er felles for alle artiklene ble modularitet brukt for generere disse.
             Dette ble løst ved å legge all informasjon om artikkelen i et JSON-objekt, og ha alle objektene i én liste i nettbutikk.js. Når siden lastes ned kjøres en kode som går gjennom listen og lager alle elementene.
         </p>
+
         <p><b>Galleri:</b> Det aller meste av funksjonalitet er implementert slik som beskrevet i P2. Valgt bilde i
             galleriet beholder ikke den hvite rammen i det bildet vises til høyre. Ellers vil brukeren kunne vise bildet
             til høyre ved klikk på et bilde til venstre. Samtidig er galleriet blitt lagt til rette for bruk på mindre
@@ -87,7 +88,9 @@
             er at venstre-siden med blogginnleggene har blitt større, altså er forholdet mellom venstre og høyre-siden
             60-40, i motsetning til P2s 50-50 fordeling. Den andre endringen er at selve arkivet har blitt sentrert i
             elementet sitt, som i P2 var intill høyre side av skjermen. Den tredje endringen er at størrelsen på bildene
-            vil maks være 75% av bredden på venstre-elementet i stedenfor ca. 50% slik vist i P2.
+            vil maks være 75% av bredden på venstre-elementet i stedenfor ca. 50% slik vist i P2. I P2 ble det også
+            beskrevet at bare venstre side skulle scrolle, men høyre side vil også kunne gjøre det hvis arkivet blir
+            stort nok.
         </p>
 
         <p><b>blogg_arkiv.js:</b> </p>
