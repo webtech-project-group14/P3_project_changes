@@ -26,7 +26,7 @@
     <div class="box">
         <h2>Endringsbeskrivelser</h2>
 
-        <p>Under og etter konstruksjonen av nettsiden ble det gjort noen få endringer fra P2 - Design. Desse endringene
+        <p>Under og etter konstruksjonen av nettsiden ble det gjort noen få endringer fra P2 - Design. Disse endringene
             er beskrevet nedenfor.</p>
 
         <p><b>Forsiden: </b>Det ble lagt animasjoner til forsiden for første besøk. Forsiden er først helt hvit, og
@@ -158,12 +158,13 @@
         <p><b>main.css:</b> Repeterende designelementer som oppdeling av siden i en høyre og venstre halvdel, og
             plassering av navigasjonsbar og footer, er spesifisert i main.css. Her er også responsivt design,
             bakgrunnsfarger, font-størrelser, -type og -farger spesifisert. Alle de ulike sidene bruker main.css som
-            grunnlag og bygger videre på spesifikt design i egen CSS-fil. </p>
+            grunnlag og bygger videre på spesifikt design i egen CSS-fil. Hele gruppen jobbet med å implementere
+            modulariteten i main.css.</p>
         <p><b>navbar_footer.js:</b> En hvit linje som indikerer nåværende besøkt nettside ble laget ved bruk av
             javascript. Dermed slippes en repeterende kode for hver side. Javascript ble også brukt til å implementere
             et responsivt design av navigasjonsbaren. (For enda bedre modularitet kan hele navigasjonsbar og footer
             lages i javascript, men denne ideen ble droppet da navigasjonsbar og footer lastet for tregt og ga en
-            blinkende effekt ved navigering mellom sidene.)</p>
+            blinkende effekt ved navigering mellom sidene.) Eirik var ansvarlig for modulariteten til navigasjonsbaren og footer.</p>
         <p><b>nettbutikk.js:</b> Sofie implementerte modularitet på nettbutikken ettersom artikkelbilde, navn, pris,
             beskrivelse, størrelses-dropdown, antall-dropdown og "Legg til i handlekurv"-knapp er felles for alle
             artiklene. Dette ble løst ved å legge all informasjon om artikkelen i et JSON-objekt, og ha alle objektene i
@@ -171,10 +172,12 @@
             elementene for alle artiklene. </p>
         <p><b>blogg_arkiv.js:</b> Blogg arkivet er implementert på en modulær måte slik at man ikke trenger å endre på
             noe i blogg_arkiv.js eller i arkivet på høyre side av nettsiden. Scriptet vil selv legge merke til nye
-            blogginnlegg i HTML fila og legge dem til når arkivet trykkes på/åpnes.</p>
+            blogginnlegg i HTML fila og legge dem til når arkivet trykkes på/åpnes. Tim hadde ansvaret for å implementere 
+            modularitet i bloggarkivet.</p>
         <p><b>epost-form.js:</b> Skjemaets design er laget i main.css slik at det kan brukes på samtlige sider uten å
             måtte repetere koden i hvert enkelt HTML-dokument, eller i hver enkelt CSS-fil. Skjemaet, og dens funksjoner
-            er laget i en ekstern JavaScript fil slik at det kan enkelt brukes av alle sidene uten å være repetitiv.</p>
+            er laget i en ekstern JavaScript fil slik at det kan enkelt brukes av alle sidene uten å være repetitiv.
+            Alexander var ansvarlig for modularitet til skjemaet.</p>
     </div>
 
     <div class="box">
