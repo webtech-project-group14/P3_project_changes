@@ -29,7 +29,7 @@
         <p>Under og etter konstruksjonen av nettsiden ble det gjort noen få endringer fra P2 - Design. Disse endringene
             er beskrevet nedenfor.</p>
 
-        <p><b>Forsiden: </b>Det ble lagt animasjoner til forsiden for første besøk. Forsiden er først helt hvit, og
+        <p><b>forside.html: </b>Det ble lagt animasjoner til forsiden for første besøk. Forsiden er først helt hvit, og
             gradvis kommer bakgrunnsbildet mer til synet.
             Ikke lenge etter bakgrunnsbildet er fullt synlig kommer navigasjonsbar og footer også frem. Aller sist
             kommer nettsidens tittel frem som har blitt avgjort til å være "Små Strikk".
@@ -38,7 +38,7 @@
             Animasjonen som nevnt over skal bare bli kjørt ved første besøk på nettsiden. For å oppnå dette kravet ble
             <i>forsiden.js</i> opprettet.</p>
 
-        <p><b>navbar_and_footer.js: </b>Fra det originale designet er det lite som er endret. For at besøkende
+        <p><b>navbar_footer.js: </b>Fra det originale designet er det lite som er endret. For at besøkende
             skulle få tydeligere indikasjon på hva som kan trykkes på, blir både instagram- og mailikonet forstørret når
             musen svever over den.
             Utenom dette, var det en del å gjøre for at nettsiden skulle opptre responsivt. Her ble det laget et
@@ -53,7 +53,7 @@
             På grunn av dette, ble det bestemt at ikon-bilder skal være i HTML-koden for hver side.</p>
         <p><b>Favicon: </b>Det ble opprettet et favicon for nettsiden.</p>
 
-        <p><b>Nettbutikk: </b> I tillegg til dropdown-meny for å velge størrelse og en "Legg til i handlekurv"-knapp ble
+        <p><b>nettbutikk.html: </b> I tillegg til dropdown-meny for å velge størrelse og en "Legg til i handlekurv"-knapp ble
             det også laget en dropdown for å velge antall av hver artikkel. Skriftstørrelse på artikkelnavn,
             artikkelpris og artikkelbeskrivelse er tilpasset, og dermed annereledes enn de andre sidene. Det ble laget
             en liten handlekurv som brukes når skjermen er liten. Den lille handlekurven fungerer helt likt som den
@@ -81,7 +81,7 @@
                     størrelser.</li>
             </ul>
 
-        <p><b>Blogg:</b> Bloggen er implementert slik det er vist i P2, men med noen endringer. Den første endringen
+        <p><b>blogg.html:</b> Bloggen er implementert slik det er vist i P2, men med noen endringer. Den første endringen
             er at venstre-siden med blogginnleggene har blitt større, altså er forholdet mellom venstre og høyre-siden
             60-40, i motsetning til P2s 50-50 fordeling. Den andre endringen er at selve arkivet har blitt sentrert i
             elementet sitt, som i P2 var intill høyre side av skjermen. Den tredje endringen er at størrelsen på bildene
@@ -114,7 +114,7 @@
             over bredden til under. Hvis man derimot har arkiv-menyen oppe og så går over den responsive bredden, så vil
             den beholde menyen/linkene.</p>
 
-        <p><b>Galleri:</b> Det aller meste av funksjonalitet er implementert slik som beskrevet i P2. Valgt bilde i
+        <p><b>galleri.html:</b> Det aller meste av funksjonalitet er implementert slik som beskrevet i P2. Valgt bilde i
             galleriet beholder ikke den hvite rammen i det bildet vises til høyre. Ellers vil brukeren kunne vise bildet
             til høyre ved klikk på et bilde til venstre. Samtidig er galleriet blitt lagt til rette for bruk på mindre
             skjermer. Da vil høyre side falle bort og brukeren får kun se venstre side. Ved trykk vil bilde bli stort på
@@ -126,12 +126,12 @@
         <p><b>galleri.js:</b> På samme måte som blogg_arkiv.js, så har det blitt lagt til en funksjon som sjekker
         størrelsen på vinduet/nettleseren og løser bugs som var relatert til responsivt design.</p>
     
-        <p><b>Om meg:</b> Siden er slik som skissert i P2.
+        <p><b>om_meg.html:</b> Siden er slik som skissert i P2.
             Vi har derimot måttet legge til en scroll-bar for å forhindre at den mørkegrå bakgrunnen pushes for langt
             mot høyre i forhold til resten av sidene. 
         </p>
        
-         <p><b>Emailform:</b>
+         <p><b>email_form.js:</b>
              Vi valgte å ha kontakt-skjemaet likt som footeren mtp farge, da det gav et bedre helhetlig inntrykk rent stilmessig. 
              
         </p>
@@ -174,7 +174,7 @@
             noe i blogg_arkiv.js eller i arkivet på høyre side av nettsiden. Scriptet vil selv legge merke til nye
             blogginnlegg i HTML fila og legge dem til når arkivet trykkes på/åpnes. Tim hadde ansvaret for å implementere 
             modularitet i bloggarkivet.</p>
-        <p><b>epost-form.js:</b> Skjemaets design er laget i main.css slik at det kan brukes på samtlige sider uten å
+        <p><b>email_form.js:</b> Skjemaets design er laget i main.css slik at det kan brukes på samtlige sider uten å
             måtte repetere koden i hvert enkelt HTML-dokument, eller i hver enkelt CSS-fil. Skjemaet, og dens funksjoner
             er laget i en ekstern JavaScript fil slik at det kan enkelt brukes av alle sidene uten å være repetitiv.
             Alexander var ansvarlig for modularitet til skjemaet.</p>
@@ -288,7 +288,7 @@
             Eirik ble ansvarlig over <i>navbar_and_footer</i>.</p>
         <p>Det var originalt satt tre ansvarlige på <i>nettbutikk.js</i>, men dette viste seg å være oppnåelig av en
             person. Sofie tok hovedansvaret her.</p>
-        <p><i>forsiden.js</i> ble opprettet for å begrense animasjoner på forsiden til første besøk.</p>
+        <p><i>forside.js</i> ble opprettet for å begrense animasjoner på forsiden til første besøk.</p>
         <p>Undermappene <i>blogg</i>, <i>nettbutikk</i>, og <i>galleri</i> ble opprettet for å gi en mer oversiktelig
             bildestruktur.</p>
         <p>Bilder ble hentet fra klienten og ikoner ble laget av Eirik i Paint.NET og Inkscape.</p>
