@@ -53,26 +53,37 @@
             På grunn av dette, ble det bestemt at ikon-bilder skal være i HTML-koden for hver side.</p>
         <p><b>Favicon: </b>Det ble opprettet et favicon for nettsiden.</p>
 
-        <p><b>Nettbutikk: </b> I tillegg til dropdown-meny for å velge størrelse og en "Legg til i handlekurv"-knapp ble det
-            også laget en dropdown for å velge antall av hver artikkel. Skriftstørrelse på artikkelnavn, artikkelpris og artikkelbeskrivelse er 
-            tilpasset, og dermed annereledes enn de andre sidene. Det ble laget en liten handlekurv som brukes når skjermen er liten. Den lille handlekurven
-            fungerer helt likt som den vanlige handlekurven. </p>
+        <p><b>Nettbutikk: </b> I tillegg til dropdown-meny for å velge størrelse og en "Legg til i handlekurv"-knapp ble
+            det også laget en dropdown for å velge antall av hver artikkel. Skriftstørrelse på artikkelnavn,
+            artikkelpris og artikkelbeskrivelse er tilpasset, og dermed annereledes enn de andre sidene. Det ble laget
+            en liten handlekurv som brukes når skjermen er liten. Den lille handlekurven fungerer helt likt som den
+            vanlige handlekurven. </p>
 
         <p><b>nettbutikk.js: </b> All funksjonalitet som er beskrevet i P2 er implementert, bortsett fra mulighet til å
             fjerne elementer i handlekurven. Det er i tillegg blitt implementert følgende funksjonalitet:
             <ul>
-                <li>Responsivt design: Når nettsiden er mindre enn 1100px forsvinner artikkelbeskrivelsen. Når nettsiden er mindre enn 800 px forsvinner høyre side og artikkelbeskrivelsen 
-                    kommer tilbake. For å få tak i handlekurven under 800px kan brukeren trykke på et handlekurvikon, og en mindre versjon av handlekurven blir tilgjenglig. Under 500px vil artikkelbeskrivelsen forsvinne for å bevare et brukervennlig design.
+                <li>Responsivt design: Når nettsiden er mindre enn 1100px forsvinner artikkelbeskrivelsen. Når nettsiden
+                    er mindre enn 800 px forsvinner høyre side og artikkelbeskrivelsen kommer tilbake. For å få tak i
+                    handlekurven under 800px kan brukeren trykke på et handlekurvikon, og en mindre versjon av
+                    handlekurven blir tilgjenglig. Under 500px vil artikkelbeskrivelsen forsvinne for å bevare et
+                    brukervennlig design.
                 </li>
-                <li>"Legg til i handlekurv"-knappen er kun mulig å trykke på dersom både størrelse og antall for artikkelen er valgt. Dette er for å unngå at brukeren glemmer å velge størrelse eller antall. </li>
-                <li>Ved å trykke på et bilde vil et større bilde vises (pop-up) og bakgrunnsfargen bak bildet blir svart og noe gjennomsiktig. I tillegg vises artikkelbeskrivelsen under bildet for å sørge for at
-                    brukeren for all informasjon også når bildet er stort. Bildet og beskrivelsen blir forstørres med en "zoom"-effekt for å gjøre overgangen finere. </li>
-                <li>Ved å holde over et bilde kommer det en skygge over bildet. Dette er for å tydeliggjøre at det er mulig å trykke på bildet.</li>
-                <li>På størrelsesdropdown-menyen er det lagt til rette for at de ulike artiklene kan ha ulike størrelser tilgjenglig. Dette kan være en fordel for Monica
-                    ettersom oppskrifter kan inneholde forskjellige størrelser.</li>
+                <li>"Legg til i handlekurv"-knappen er kun mulig å trykke på dersom både størrelse og antall for
+                    artikkelen er valgt. Dette er for å unngå at brukeren glemmer å velge størrelse eller antall. </li>
+                <li>Ved å trykke på et bilde vil et større bilde vises (pop-up) og bakgrunnsfargen bak bildet blir svart
+                    og noe gjennomsiktig. I tillegg vises artikkelbeskrivelsen under bildet for å sørge for at brukeren
+                    for all informasjon også når bildet er stort. Bildet og beskrivelsen blir forstørres med en
+                    "zoom"-effekt for å gjøre overgangen finere. </li>
+                <li>Ved å holde over et bilde kommer det en skygge over bildet. Dette er for å tydeliggjøre at det er
+                    mulig å trykke på bildet.</li>
+                <li>På størrelsesdropdown-menyen er det lagt til rette for at de ulike artiklene kan ha ulike størrelser
+                    tilgjenglig. Dette kan være en fordel for Monica ettersom oppskrifter kan inneholde forskjellige
+                    størrelser.</li>
             </ul>
-            Ettersom artikkelbilde, navn, pris, beskrivelse, størrelses-dropdown, antall-dropdown og "Legg til i handlekurv"-knapp er felles for alle artiklene ble modularitet brukt for generere disse.
-            Dette ble løst ved å legge all informasjon om artikkelen i et JSON-objekt, og ha alle objektene i én liste i nettbutikk.js. Når siden lastes ned kjøres en kode som går gjennom listen og lager alle elementene.
+            Ettersom artikkelbilde, navn, pris, beskrivelse, størrelses-dropdown, antall-dropdown og "Legg til i
+            handlekurv"-knapp er felles for alle artiklene ble modularitet brukt for generere disse. Dette ble løst ved
+            å legge all informasjon om artikkelen i et JSON-objekt, og ha alle objektene i én liste i nettbutikk.js. Når
+            siden lastes ned kjøres en kode som går gjennom listen og lager alle elementene.
         </p>
 
         <p><b>Galleri:</b> Det aller meste av funksjonalitet er implementert slik som beskrevet i P2. Valgt bilde i
@@ -96,12 +107,57 @@
         <p><b>blogg_arkiv.js:</b> </p>
     
     
-     <p><b>Om meg:</b> Siden er slik som skissert i P2. 
-        Vi har derimot måttet legge til en scroll-bar for å forhindre at den mørkegrå bakgrunnen pushes for langt mot høyre i forhold til resten av sidene. 
+        <p><b>Om meg:</b> Siden er slik som skissert i P2.
+            Vi har derimot måttet legge til en scroll-bar for å forhindre at den mørkegrå bakgrunnen pushes for langt
+            mot høyre i forhold til resten av sidene.
         </p>
-    
-    
 
+        <p><b>Nettsidens generelle utseende:</b>
+            <ul>
+                <li>Byttet font på alt unntatt contact-formen fra <i>Trebuchet MS, Helvetica, sans-serif</i> til
+                <i> 'Roboto', Helvetica, sans-serif</i>.</li>
+                <li>Den mørkegrå bakgrunnsfargen på venstre side har blitt spesifisert til fargen #737373 og den hvite
+                fargen på høyre side har blitt spesifisert til fargen #e7e5e6.</li>
+                <li>Navigasjonsbaren er nå bare gjennomsitig på forsiden og ikke på de andre sidene.</li>
+                <li>Fargen på skriften på venstre side er hvit, mens på høyre er den svart.</li>
+                <li>Footeren er nå alltid nederst på vinduet i stedenfor nederst på selve siden.</li>
+            </ul>
+        </p>
+    </div>
+
+    <div class="box">
+        <!--EKS:  Rachel fulfilled her JavaScript requirements with a user-defined function on intro.html
+and rollovers on members.html. Tom validated form inputs on orform.html and
+implemented the pull-down menu for each page -->
+        <h2>Minstekrav:</h2>
+        <ul>
+            <!--En meny på toppen av siden som vil få brukeren til hvilken som helst side med kun ett trykk.
+            Navigasjonsbaren skal være tilstede på alle sidene.-->
+            <li><b>Navigasjonsbar:</b> </li>
+
+            <!--Copyright-symbol og “2020” til venstre. Instagram-symbol og epost-ikon nederst til venstre. Gjør det
+            mulig å finne instagramprofilen til Monica og ta kontakt via epost. Footeren skal være plassert nederst på
+            siden.-->
+            <li><b>Footer:</b> </li>
+
+            <!--Kontaktskjema hvor brukeren kan skrive en mail direkte til Monica. Skjemaet vil bestå av et felt for
+            navn, et felt for epost-adresse, et felt for melding og en knapp for å trykke “send”.-->
+            <li><b>Epost-form:</b> </li>
+
+            <!--Funksjonalitet for å bestille artikler. Artiklene man kan kjøpe vil vises til venstre. Man velger
+            størrelse og antall ved hjelp av dropdown-menyer for hver artikkel. Når artikkelen velges legges automatisk
+            artikkelen i handlekurven på høyre side. Handlekurven vil oppsummere artikkelnavn, antall, størrelse og
+            pris. Nederst er det en knapp for å sende bestillingen.-->
+            <li><b>Nettbutikk:</b> </li>
+
+            <!--Flere små bilder til venstre (3 bilder i bredden). Ved å trykke på ett bilde til venstre kommer det
+            opp som et stort bilde til høyre.-->
+            <li><b>Bildegalleri:</b> </li>
+
+            <!--Ved å trykke på årstall vil månedene dukke opp under, som en arkivmeny.-->
+            <li><b>Bloggarkiv:</b> </li>
+
+        </ul>
     </div>
 
     <div class="box">
