@@ -60,7 +60,7 @@
             vanlige handlekurven. </p>
 
         <p><b>nettbutikk.js: </b> All funksjonalitet som er beskrevet i P2 er implementert, bortsett fra mulighet til å
-            fjerne elementer i handlekurven. Det er i tillegg blitt implementert følgende funksjonalitet:
+            fjerne elementer i handlekurven. Det er i tillegg blitt implementert følgende funksjonalitet:</p>
             <ul>
                 <li>Responsivt design: Når nettsiden er mindre enn 1100px forsvinner artikkelbeskrivelsen. Når nettsiden
                     er mindre enn 800 px forsvinner høyre side og artikkelbeskrivelsen kommer tilbake. For å få tak i
@@ -80,11 +80,11 @@
                     tilgjenglig. Dette kan være en fordel for Monica ettersom oppskrifter kan inneholde forskjellige
                     størrelser.</li>
             </ul>
-            Ettersom artikkelbilde, navn, pris, beskrivelse, størrelses-dropdown, antall-dropdown og "Legg til i
+        <p>Ettersom artikkelbilde, navn, pris, beskrivelse, størrelses-dropdown, antall-dropdown og "Legg til i
             handlekurv"-knapp er felles for alle artiklene ble modularitet brukt for generere disse. Dette ble løst ved
             å legge all informasjon om artikkelen i et JSON-objekt, og ha alle objektene i én liste i nettbutikk.js. Når
-            siden lastes ned kjøres en kode som går gjennom listen og lager alle elementene.
-        </p>
+            siden lastes ned kjøres en kode som går gjennom listen og lager alle elementene. </p>
+
 
         <p><b>Galleri:</b> Det aller meste av funksjonalitet er implementert slik som beskrevet i P2. Valgt bilde i
             galleriet beholder ikke den hvite rammen i det bildet vises til høyre. Ellers vil brukeren kunne vise bildet
@@ -105,20 +105,35 @@
         </p>
 
         <p><b>blogg_arkiv.js:</b> Dette skriptet var hovedsakelig ment for å kontrollere arkivet på høyre side, men
-        inneholder nå også funksjoner som gjør nettsiden mer responsiv, endringene gjelder hovedsakelig tilleggingen av
-        funksjonene <i>open_arkiv</i> og <i>check_screen</i>. Begge de forrigenevnte funksjonene fungerer sammen på
-        følgende måte:
+            inneholder nå også funksjoner som gjør nettsiden mer responsiv, endringene gjelder hovedsakelig tilleggingen
+            av funksjonene <i>open_arkiv</i> og <i>check_screen</i>. Begge de forrigenevnte funksjonene fungerer sammen
+            på følgende måte: </p>
             <ul>
-                <li></li>
+                <li><i>check_screen()</i> sjekker om bredden på vinduet/nettleseren har endret seg fra over til under
+                    den responsive bredden på 800px eller motsatt. Hvis den endrer seg fra over til under, så passer
+                    funksjonen på at høyre-elementet (id="right") forsvinner, for da skal bare venstre-elementet
+                    (id="left") være synlig. Knappen for å åpne arkivet/høyre-elementet dukker da opp, men blir styrt av
+                    CSS. Hvis bredden derimot endrer seg fra under til over den responsive bredden, så vil funksjonen
+                    gjemme høyre-elementet dersom det er oppe, for så å vise den igjen, samtidig som knappen for å lukke
+                    arkivet vil forsvinne. Hvis høyre-elementet derimot er lukket, så vil den vises. Dette blir gjort
+                    for å løse en bug med stylingen. Denne funksjonen blir kjørt hvert 100ms for å ikke ta alt for mye
+                    regnekraft.</li>
+                <li><i>open_arkiv(archiveToggle)</i> styrer hovedsakelig styringen av arkivet når skjermen er under
+                den responsive bredden på 800px. Når arkivet da er lukket vil det være en knapp nede til høyre for å
+                åpne arkivet, som da vil åpne arkivet. Når arkivet er oppe, vil det være en knapp oppe til høyre, som
+                er en X, som lukker arkivet hvis den blir trykket på.</li>
             </ul>
-        </p>
+        <p>Videre er det viktig å nevne at det med vilje er sånn at når arkivet lukkes, så lukkes også arkiv-menyen seg
+            (med linkene). Dette gjelder når bredden på skjermen er under den responsive bredden eller når man går fra
+            over bredden til under. Hvis man derimot har arkiv-menyen oppe og så går over den responsive bredden, så vil
+            den beholde menyen/linkene.</p>
     
         <p><b>Om meg:</b> Siden er slik som skissert i P2.
             Vi har derimot måttet legge til en scroll-bar for å forhindre at den mørkegrå bakgrunnen pushes for langt
             mot høyre i forhold til resten av sidene.
         </p>
 
-        <p><b>Nettsidens generelle utseende:</b>
+        <p><b>Nettsidens generelle utseende:</b></p>
             <ul>
                 <li>Byttet font på alt unntatt contact-formen fra <i>Trebuchet MS, Helvetica, sans-serif</i> til
                 <i> 'Roboto', Helvetica, sans-serif</i>.</li>
@@ -128,7 +143,14 @@
                 <li>Fargen på skriften på venstre side er hvit, mens på høyre er den svart.</li>
                 <li>Footeren er nå alltid nederst på vinduet i stedenfor nederst på selve siden.</li>
             </ul>
-        </p>
+
+    </div>
+
+    <div class="box">
+        <!--Indicate how the modularity requirement was handled and who was responsible for
+            the implementation-->
+        <h2>Modularity requirement</h2>
+        <p></p>
     </div>
 
     <div class="box">
