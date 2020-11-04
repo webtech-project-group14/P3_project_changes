@@ -85,16 +85,6 @@
             å legge all informasjon om artikkelen i et JSON-objekt, og ha alle objektene i én liste i nettbutikk.js. Når
             siden lastes ned kjøres en kode som går gjennom listen og lager alle elementene. </p>
 
-
-        <p><b>Galleri:</b> Det aller meste av funksjonalitet er implementert slik som beskrevet i P2. Valgt bilde i
-            galleriet beholder ikke den hvite rammen i det bildet vises til høyre. Ellers vil brukeren kunne vise bildet
-            til høyre ved klikk på et bilde til venstre. Samtidig er galleriet blitt lagt til rette for bruk på mindre
-            skjermer. Da vil høyre side falle bort og brukeren får kun se venstre side. Ved trykk vil bilde bli stort på
-            skjermen og brukeren kan fjerne bildet med en knapp. Monica vil kanskje legge til mer tekst på galleriet
-            selv. Dersom brukeren ønsker å lese teksten og få bort bildet når det er stort på høyre siden, kan brukeren
-            trykke en gang til på valgt bilde for å ta bort bildet og se teksten under. Dette er kun mulig når skjermen
-            er så stor at den viser høyre og venstre side seperat. </p>
-
         <p><b>Blogg:</b> Bloggen er implementert slik det er vist i P2, men med noen endringer. Den første endringen
             er at venstre-siden med blogginnleggene har blitt større, altså er forholdet mellom venstre og høyre-siden
             60-40, i motsetning til P2s 50-50 fordeling. Den andre endringen er at selve arkivet har blitt sentrert i
@@ -127,6 +117,18 @@
             (med linkene). Dette gjelder når bredden på skjermen er under den responsive bredden eller når man går fra
             over bredden til under. Hvis man derimot har arkiv-menyen oppe og så går over den responsive bredden, så vil
             den beholde menyen/linkene.</p>
+
+        <p><b>Galleri:</b> Det aller meste av funksjonalitet er implementert slik som beskrevet i P2. Valgt bilde i
+            galleriet beholder ikke den hvite rammen i det bildet vises til høyre. Ellers vil brukeren kunne vise bildet
+            til høyre ved klikk på et bilde til venstre. Samtidig er galleriet blitt lagt til rette for bruk på mindre
+            skjermer. Da vil høyre side falle bort og brukeren får kun se venstre side. Ved trykk vil bilde bli stort på
+            skjermen og brukeren kan fjerne bildet med en knapp. Monica vil kanskje legge til mer tekst på galleriet
+            selv. Dersom brukeren ønsker å lese teksten og få bort bildet når det er stort på høyre siden, kan brukeren
+            trykke en gang til på valgt bilde for å ta bort bildet og se teksten under. Dette er kun mulig når skjermen
+            er så stor at den viser høyre og venstre side seperat. </p>
+
+        <p><b>galleri.js:</b> På samme måte som blogg_arkiv.js, så har det blitt lagt til en funksjon som sjekker
+        størrelsen på vinduet/nettleseren og løser bugs som var relatert til responsivt design.</p>
     
         <p><b>Om meg:</b> Siden er slik som skissert i P2.
             Vi har derimot måttet legge til en scroll-bar for å forhindre at den mørkegrå bakgrunnen pushes for langt
@@ -135,8 +137,7 @@
 
         <p><b>Nettsidens generelle utseende:</b></p>
             <ul>
-                <li>Byttet font på alt unntatt contact-formen fra <i>Trebuchet MS, Helvetica, sans-serif</i> til
-                <i> 'Roboto', Helvetica, sans-serif</i>.</li>
+                <li>Byttet font på alt til <i>'Roboto', Helvetica, sans-serif</i>.</li>
                 <li>Den mørkegrå bakgrunnsfargen på venstre side har blitt spesifisert til fargen #737373 og den hvite
                 fargen på høyre side har blitt spesifisert til fargen #e7e5e6.</li>
                 <li>Navigasjonsbaren er nå bare gjennomsitig på forsiden og ikke på de andre sidene.</li>
@@ -151,51 +152,38 @@
     <div class="box">
         <!--Indicate how the modularity requirement was handled and who was responsible for
             the implementation-->
-        <h2>Modularity requirement</h2>
+        <h2>Krav for modularitet</h2>
         <p></p>
     </div>
 
     <div class="box">
-        <!--EKS:  Rachel fulfilled her JavaScript requirements with a user-defined function on intro.html
-        and rollovers on members.html. Tom validated form inputs on orform.html and
-        implemented the pull-down menu for each page -->
         <h2>Minstekrav:</h2>
         <ul>
-            <!--En meny på toppen av siden som vil få brukeren til hvilken som helst side med kun ett trykk.
-            Navigasjonsbaren skal være tilstede på alle sidene.-->
             <li><b>Navigasjonsbar:</b> Eirik oppfylte minstekravet for navigasjonsbar ved å lage hyperlink til de ulike
                 nettsidene innesluttet i et div element. Dette div-elementet eksisterer i HTML-koden for hver av sidene.
                 Minstekravet gjelder ikke for responsiv design til navigasjonsbar ved mindre skjermstørrelser.</li>
 
-            <!--Copyright-symbol og “2020” til venstre. Instagram-symbol og epost-ikon nederst til venstre. Gjør det
-            mulig å finne instagramprofilen til Monica og ta kontakt via epost. Footeren skal være plassert nederst på
-            siden.-->
             <li><b>Footer:</b> Eirik oppfylte minstekravet for footer ved å lage ikoner med tilhørende hyperlink til
                 Monicas instagram og kontaktform i HTML-koden i footer-elementet til hver nettside. Teksten som
                 inneholder copyright-symbol og årstall ble også lagt til i footer. Relativ posisjonering av elementene
                 ble gjennomført i main.css.</li>
 
-            <!--Kontaktskjema hvor brukeren kan skrive en mail direkte til Monica. Skjemaet vil bestå av et felt for
-            navn, et felt for epost-adresse, et felt for melding og en knapp for å trykke “send”.-->
             <li><b>Epost-form:</b> Alexander oppfylte minstekrav ved å designe skjemaet i main.css og lagde skjemaet ved
                 hjelp av JavaScript(emailform.js). Skjemaet vises/skjules ved en funksjon i emailform.js som "lytter"
                 etter klikk. Kunder må fylle ut alle felt med relevant info for å få sendt henvendelsen. Kunde får da
                 beskjed om at meldingen er sendt.</li>
 
-            <!--Funksjonalitet for å bestille artikler. Artiklene man kan kjøpe vil vises til venstre. Man velger
-            størrelse og antall ved hjelp av dropdown-menyer for hver artikkel. Når artikkelen velges legges automatisk
-            artikkelen i handlekurven på høyre side. Handlekurven vil oppsummere artikkelnavn, antall, størrelse og
-            pris. Nederst er det en knapp for å sende bestillingen.-->
             <li><b>Nettbutikk:</b> Sofie oppfylte minstekravene for nettbutikken ved å lage funksjoner i nettbutikk.js
                 for å vise informasjon om artiklene (navn, pris, bilde, beskrivelse) og dropdown-menyer på venstre side.
                 For å legge artikkelen i handlekurven ble det laget en knapp. I nettbutikk.js ble det laget en funksjon
                 som lager handlekurven og som oppdaterer handlekurven når en artikkel legges i handlekurven.</li>
 
-            <!--Flere små bilder til venstre (3 bilder i bredden). Ved å trykke på ett bilde til venstre kommer det
-            opp som et stort bilde til høyre.-->
-            <li><b>Bildegalleri:</b> </li>
+            <li><b>Bildegalleri:</b> Ida og Tim oppfylte minstekravet til bildegalleriet ved å kombinere CSS og
+                Javascript. CSS-filen lager en rutenett av 3 bilder i bredden på venstre side. En Javascript-funksjon
+                kjører i det brukeren trykker på et av bildene i rutenettet. Da vil det samme bilde vises i stor
+                størrelse på høyre side ved hjelp av denne funksjonen. Ved å trykke på samme bilde igjen, vil funksjonen
+                sørge for at alt på høyre side går bort, for så å legge til velkomstteksten igjen. </li>
 
-            <!--Ved å trykke på årstall vil månedene dukke opp under, som en arkivmeny.-->
             <li><b>Bloggarkiv:</b> Tim oppfylte minstekravet til bloggarkivet med funksjoner i blogg_arkiv.js, som blir
             kjørt når man trykker på ett av årstallene i arkivet på blogg-siden. Når et år blir trykket på, vil alle
             månedene med et blogg-innlegg dukke opp med linker til hver av overskriftene til blogg-innleggene i den
